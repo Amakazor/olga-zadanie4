@@ -4,7 +4,7 @@
 /*Temat: pêtle while i do while, operator logiczny || */
 int main()
 {
-	bool example = true; 
+	bool example = false; 
 
 	if (example)
 	{
@@ -19,9 +19,7 @@ int main()
 				number += 8; //operator dodania do liczby
 			}
 		}
-		/*KONIEC PRZYK£AD 4.1*/
-
-		/*PRZYK£AD 4.2*/
+		/*KONIEC PRZYK£AD 4.1*//*PRZYK£AD 4.2*/
 		/*proszenie u¿ytkownika o wpisanie 1 a¿ do skutku*/
 		{
 			bool input_good = false;
@@ -82,7 +80,10 @@ int main()
 			int liczba_dwa = 0;
 			int u_input = 0;
 			int suma = 0;
-
+			bool rigth_try = false;
+			bool false_try = true;
+		
+			
 
 			std::cout << "Podaj pierwsza liczbe" << "\n\n";
 
@@ -94,11 +95,31 @@ int main()
 			std::cout << "#2. Odejmowanie                 #" << "\n\n";
 			std::cout << "#3. Dzielenie                   #" << "\n\n";
 			std::cout << "#4. Mnozenie                    #" << "\n\n";
-			std::cout << "Podaj numer opcji" << "\n\n";
+			
+			
+			do
+			{	
+				if (!false_try)
+				{
+					std::cout << "Wybrales bledny numer dzialania" << "\n\n";
+				}
+				
+				std::cout << "Podaj numer opcji" << "\n\n";
+				std::cin >> u_input;
+				std::cout << "\n\n";
 
-			std::cin >> u_input;
+				if (u_input == 1 || u_input == 2 || u_input == 3 || u_input == 4)
+				{
+					rigth_try = true;
+				}
 
-			std::cout << "\n";
+				else if (false_try)
+				{
+					false_try = false;
+				}
+
+			} while (rigth_try == false);
+			
 
 			std::cout << "Podaj druga liczbe" << "\n\n";
 
@@ -120,30 +141,27 @@ int main()
 
 			case 3:
 
-				if (liczba_dwa != 0)
-				{
-					suma = liczba_jeden / liczba_dwa;
-					std::cout << "Twoj wynik to: " << suma;
-				}
-
-				else
-				{
-					std::cout << "\n";
-					std::cout << "Nie mozna dzielic przez 0, wybierz inna liczbe" << "\n";
-					std::cin >> liczba_dwa;
-					std::cout << "\n";
+				do
+				{	if (!false_try)
+					{
+						std::cout << "Nie mozna dzielic przez 0";
+					}
 
 					if (liczba_dwa != 0)
 					{
 						suma = liczba_jeden / liczba_dwa;
-						std::cout << "Twoj wynik to: " << suma;
+						std::cout << "Twoj wynik wynosi: " << suma << "\n\n";
+						rigth_try = true;
 					}
-
-					else
+					else if (liczba_dwa == 0)
 					{
-						std::cout << "Jestes glupi" << "\n";
+						false_try = false;
 					}
-				}
+				} while (rigth_try == false);
+
+				break;
+
+
 
 			case 4:
 
