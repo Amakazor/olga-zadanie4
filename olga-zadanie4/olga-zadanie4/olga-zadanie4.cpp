@@ -2,6 +2,73 @@
 
 /*ZADANIE 4*/
 /*Temat: pêtle while i do while, operator logiczny || */
+
+
+
+
+
+
+//Chuj wie, jak to zrobic mmam dosc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main()
 {
 	bool example = false; 
@@ -68,7 +135,7 @@ int main()
 	}
 	else
 	{
-		bool switch_current_exercise = false;
+		bool switch_current_exercise = true;
 
 		/*ZADANIE 4.1*/
 		// Przerób Twój kod z poprzedniego zadania. Wykorzystaj odpowiednie petle w celu sprawdzenia czy dane wprowadzone przez u¿ytkownika s¹ poprawne tak d³ugo, a¿ poda poprawne dane
@@ -121,20 +188,24 @@ int main()
 			} while (rigth_try == false);
 			
 
-			std::cout << "Podaj druga liczbe" << "\n\n";
-
-			std::cin >> liczba_dwa;
-
-			std::cout << "\n";
+			
 
 			switch (u_input)
 			{
 			case 1:
+
+				std::cout<< "Podaj druga liczbe" << "\n\n";
+				std::cin >> liczba_dwa;
+				std::cout<< "\n\n";
 				suma = liczba_jeden + liczba_dwa;
 				std::cout << "Twoj wynik wynosi: " << suma;
 				break;
 
 			case 2:
+
+				std::cout << "Podaj druga liczbe" << "\n\n";
+				std::cin >> liczba_dwa;
+				std::cout << "\n\n";
 				suma = liczba_jeden - liczba_dwa;
 				std::cout << "Twoj wynik wynosi: " << suma;
 				break;
@@ -144,8 +215,12 @@ int main()
 				do
 				{	if (!false_try)
 					{
-						std::cout << "Nie mozna dzielic przez 0";
+					std::cout << "Nie mozna dzielic przez 0, spróbuj jeszcze raz" << "\n\n";
 					}
+
+					std::cout << "Podaj druga liczbe" << "\n\n";
+					std::cin >> liczba_dwa;
+					std::cout << "\n\n";
 
 					if (liczba_dwa != 0)
 					{
@@ -153,7 +228,7 @@ int main()
 						std::cout << "Twoj wynik wynosi: " << suma << "\n\n";
 						rigth_try = true;
 					}
-					else if (liczba_dwa == 0)
+					else
 					{
 						false_try = false;
 					}
@@ -167,6 +242,8 @@ int main()
 
 				suma = liczba_jeden * liczba_dwa;
 				std::cout << "Twoj wynik wynosi: " << suma;
+
+				break;
 
 			default:
 
@@ -187,8 +264,24 @@ int main()
 		// 3. wypisz wynik na konsolê.
 		// NOTATKA: W liczbach ca³kowitych powy¿ej 2147483647 bêd¹ pojawia³y siê b³êdy. To wina tego, ¿e int zajmuje w pamiêci ograniczone miejsce i gdy jego wartoœæ je przekroczy dziej¹ siê anomalne rzeczy.
 		{
+			int podstawa = 0;
+			int wykladnik = 0;
+			int suma = 0;
+
+			std::cout << "Podaj prosze podstawe potegi" << "\n\n";
+			std::cin >> podstawa;
+			std::cout << "\n\n" << "Podaj prosze wykladnik potegi" << "\n\n";
+			std::cin >> wykladnik;
+			std::cout << "\n\n";
+
+			while ()
+			{
+				podstawa
+			}
+
+		
 			
 		}
-		/*KONIEC ZADANIE 4.2*/
+		
 	}
 }
