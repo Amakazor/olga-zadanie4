@@ -216,10 +216,82 @@ int main()
 				wykladnik--;
 			}
 			
-			std::cout << suma;
+			std::cout << suma << "\n\n";
 			 
 			
 		}
+
+
+		std::cout << "Mam calkiem fajnego mezczyzne \n\n";	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		std::cout << "Ewentualnie, ze jest irytujacy \n\n";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		std::cout << "Wtedy musi odpokutowac \n\n";
 		
 	}
 }
