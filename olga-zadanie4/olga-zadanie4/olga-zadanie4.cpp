@@ -3,72 +3,6 @@
 /*ZADANIE 4*/
 /*Temat: pêtle while i do while, operator logiczny || */
 
-
-
-
-
-
-//Chuj wie, jak to zrobic mmam dosc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main()
 {
 	bool example = false; 
@@ -149,6 +83,9 @@ int main()
 			int suma = 0;
 			bool rigth_try = false;
 			bool false_try = true;
+			bool right_try_2 = false;
+			bool false_try_2 = true;
+
 		
 			
 
@@ -188,8 +125,6 @@ int main()
 			} while (rigth_try == false);
 			
 
-			
-
 			switch (u_input)
 			{
 			case 1:
@@ -213,9 +148,9 @@ int main()
 			case 3:
 
 				do
-				{	if (!false_try)
+				{	if (!false_try_2)
 					{
-					std::cout << "Nie mozna dzielic przez 0, spróbuj jeszcze raz" << "\n\n";
+					std::cout << "Nie mozna dzielic przez 0, sprobuj jeszcze raz" << "\n\n";
 					}
 
 					std::cout << "Podaj druga liczbe" << "\n\n";
@@ -226,13 +161,13 @@ int main()
 					{
 						suma = liczba_jeden / liczba_dwa;
 						std::cout << "Twoj wynik wynosi: " << suma << "\n\n";
-						rigth_try = true;
+						right_try_2 = true;
 					}
 					else
 					{
-						false_try = false;
+						false_try_2 = false;
 					}
-				} while (rigth_try == false);
+				} while (right_try_2 == false);
 
 				break;
 
@@ -265,8 +200,8 @@ int main()
 		// NOTATKA: W liczbach ca³kowitych powy¿ej 2147483647 bêd¹ pojawia³y siê b³êdy. To wina tego, ¿e int zajmuje w pamiêci ograniczone miejsce i gdy jego wartoœæ je przekroczy dziej¹ siê anomalne rzeczy.
 		{
 			int podstawa = 0;
-			int wykladnik = 0;
-			int suma = 0;
+			int wykladnik = 1;
+			int suma = 1;
 
 			std::cout << "Podaj prosze podstawe potegi" << "\n\n";
 			std::cin >> podstawa;
@@ -274,12 +209,15 @@ int main()
 			std::cin >> wykladnik;
 			std::cout << "\n\n";
 
-			while ()
+			while (wykladnik > 0)
 			{
-				podstawa
+				
+				suma *= podstawa;
+				wykladnik--;
 			}
-
-		
+			
+			std::cout << suma;
+			 
 			
 		}
 		
